@@ -1,0 +1,169 @@
+-OOP(Object Oriented Programming/paradigm)
+2-Containment
+3-Encapsulation
+4-Polymorphism
+5-Abstraction
+5-Specialization
+6-Generalization
+7-Interfaces
+
+Why OOP:-
+-Bcz of sequential programming in past
+-Real life problems cannot be implimented by sequential or functional paradigms
+-OOP is inspired by real life objects and their relationships
+
+Class/Objects
+
+Class:-
+-Recepie/Definition/Blue Print
+-Properties
+-Functions
+
+Object:-
+when you instantiate a class it means you created object of the class.
+object contains 2 things:-
+	a-Properties
+	b-functions
+Class:-
+Human:-
+	Properties:-
+		Name
+		Nationality
+		Gender
+		legs
+		hands
+		brain
+	Functions:-
+		Walk()
+		Talk()	
+		Think()
+		Eat()
+		Drink()
+		Sleep()
+OOP:-
+1-Inheritance:-
+	a-Single level
+	b-Multilevel
+	c-Heirarchical
+	d-Multiple
+	e-Multipath
+-Parent Child relation
+-The implicit posession of the properties and methods/functions of a child provided by its parent.
+
+Note:We can say Parent as BaseClass.
+
+Inheritance is a.. "is a" relation.
+
+Teacher is a Human
+Teacher is a child of a Human
+Teacher is an extension of Human
+Teacher extends Human
+Human is a Prent of Teacher
+
+a-Single Level Inheritance:-
+
+Surgeon is a Human
+Singer is a Human
+
+Human
+{
+}
+Teacher : Human
+{
+}
+
+b-Multilevel Inheritance:-
+
+Human{}
+Teacher:Human{}
+MathsTeacher:Teacher
+AlgebraTeacher:MathsTeacher
+
+c-Heirarchical:-
+Please see picture of Inheritance
+
+d-Multiple Inheritance:-
+When you have multiple parents of a single child at the same level or sibling level.
+
+eg-1:-
+Bed
+{
+	Foam
+	Size
+	
+	Sleep()
+	Sit()
+}
+Sofa
+{
+	Foam
+	Size
+	Armrest
+
+	Sit()
+}
+
+SofaCumBed : Bed, Sofa
+{
+	
+}
+
+eg-2:- (Assignment: Find out more examples of multiple inheritance)
+
+Radio
+{
+	PlayRadio()
+}
+
+CDPlayer
+{
+	PlayCD()
+	PlayRadio()
+}
+
+MusicSystem
+{
+	PlayCD()
+	PlayRadio()
+}
+
+-Multipath Inheritance:-
+-Its a scenario or special case of Multiple Inheritance in which a diamond shape of classes occurs.
+-Diamond Problems.
+
+WoodenFurniture
+{
+	TypeOfWood
+	Shape
+	Size
+}
+
+Bed : WoodenFurniture
+{
+	Foam
+	//Size //Implicitly coming from parent
+	
+	Sleep()
+	Sit()
+}
+Sofa : WoodenFurniture
+{
+	Foam
+	//Size //Implicitly coming from parent
+	Armrest
+
+	Sit()
+}
+
+SofaCumBed : Bed, Sofa
+{
+	
+}
+
+
+Console Application:-
+Black screen
+Input from the keyboard, and output on the screen
+
+Assignment:-
+Different scenarios of the same types of inheritance: 02-17-2020
