@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Atique
 {
-    class Program
+    class Inheritance
     {
         #region Single Level Inheritance
         class Human
