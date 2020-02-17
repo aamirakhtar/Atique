@@ -129,7 +129,6 @@ namespace Atique
 
         #region Multipath Inheritance
         //Please see Multiple Inheritance section, it is implimented by inclusion of WoodenFurniture class
-
         class WoodenFurniture
         { }
 
