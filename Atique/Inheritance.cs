@@ -4,136 +4,136 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Atique
+namespace Atique.Inheritance
 {
-    class Inheritance
+    #region Single Level Inheritance
+    class Human
     {
-        #region Single Level Inheritance
-        class Human
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public string Nationality { get; set; }
+        public string Language { get; set; }
+        public string Legs { get; set; }
+        public string Hands { get; set; }
+        public string Brain { get; set; }
+
+        public void Sleep() { }
+        public void Walk() { }
+        public void Talk() { }
+        public void Eat() { }
+        public void Run() { }
+        public void Think() { }
+    }
+
+    class Teacher : Human
+    {
+        public string Subject { get; set; }
+        public string Qualification { get; set; }
+
+        public void Teach() { }
+    }
+
+    #endregion
+
+    #region Multilevel Inheritance
+
+    class MathsTeacher : Teacher
+    {
+        public void TeachingMaths()
         {
-            public string Name { get; set; }
-            public string Gender { get; set; }
-            public string Nationality { get; set; }
-            public string Language { get; set; }
-            public string Legs { get; set; }
-            public string Hands { get; set; }
-            public string Brain { get; set; }
-
-            public void Sleep() { }
-            public void Walk() { }
-            public void Talk() { }
-            public void Eat() { }
-            public void Run() { }
-            public void Think() { }
         }
+    }
 
-        class Teacher : Human
+    class AlgebraTeacher : MathsTeacher
+    {
+        public void TeachingAlgebra()
         {
-            public string Subject { get; set; }
-            public string Qualification { get; set; }
-
-            public void Teach() { }
         }
+    }
+    #endregion
 
-        #endregion
+    #region Heirarchical Inheritance
+    class Doctor : Human
+    {
+        public string Degree { get; set; }
 
-        #region Multilevel Inheritance
+        public void Treat() { }
+    }
 
-        class MathsTeacher : Teacher
+    class Surgeon : Doctor
+    {
+        public void Surgery() { }
+    }
+
+    class Physician : Doctor
+    {
+        public void PrescribeMedicine() { }
+    }
+
+    class NueroSurgeon : Surgeon
+    {
+        public void NeuroSurgery()
         {
-            public void TeachingMaths()
-            {
-            }
         }
+    }
 
-        class AlgebraTeacher : MathsTeacher
+    class OrthopediacSurgeon : Surgeon
+    {
+        public void OrthopediacSurgery()
         {
-            public void TeachingAlgebra()
-            {
-            }
         }
-        #endregion
+    }
 
-        #region Heirarchical Inheritance
-        class Doctor : Human
+    class Gestroentrologist : Physician
+    {
+        public void PrescribeGestroMedicine()
         {
-            public string Degree { get; set; }
-
-            public void Treat() { }
         }
+    }
 
-        class Surgeon : Doctor
+    class Dermatologist : Physician
+    {
+        public void PrescribeSkinMedicine()
         {
-            public void Surgery() { }
         }
+    }
+    #endregion
 
-        class Physician : Doctor
-        {
-            public void PrescribeMedicine() { }
-        }
+    #region Multiple Inheritance
 
-        class NueroSurgeon : Surgeon
-        {
-            public void NeuroSurgery()
-            {
-            }
-        }
+    class Bed : WoodenFurniture //WodenFurniture show the case of Multipath Inheritance/Diamond Problem
+    {
+        public string Foam { get; set; }
+        public string Size { get; set; }
 
-        class OrthopediacSurgeon : Surgeon
-        {
-            public void OrthopediacSurgery()
-            {
-            }
-        }
+        public void Sleep() { }
+        public void Sit() { }
+    }
 
-        class Gestroentrologist : Physician
-        {
-            public void PrescribeGestroMedicine()
-            {
-            }
-        }
+    class Sofa : WoodenFurniture //WodenFurniture show the case of Multipath Inheritance/Diamond Problem
+    {
+        public string Foam { get; set; }
+        public string Size { get; set; }
+        public string Armrest { get; set; }
 
-        class Dermatologist : Physician
-        {
-            public void PrescribeSkinMedicine()
-            {
-            }
-        }
-        #endregion
+        public void Sit() { }
+    }
 
-        #region Multiple Inheritance
+    //Cannot be implimented
+    //class SofaCumBed : Sofa, Bed
+    //{
+    //}
+    #endregion
 
-        class Bed : WoodenFurniture //WodenFurniture show the case of Multipath Inheritance/Diamond Problem
-        {
-            public string Foam { get; set; }
-            public string Size { get; set; }
+    #region Multipath Inheritance
+    //Please see Multiple Inheritance section, it is implimented by inclusion of WoodenFurniture class
+    class WoodenFurniture
+    { }
 
-            public void Sleep() { }
-            public void Sit() { }
-        }
+    #endregion
 
-        class Sofa : WoodenFurniture //WodenFurniture show the case of Multipath Inheritance/Diamond Problem
-        {
-            public string Foam { get; set; }
-            public string Size { get; set; }
-            public string Armrest { get; set; }
-
-            public void Sit() { }
-        }
-
-        //Cannot be implimented
-        //class SofaCumBed : Sofa, Bed
-        //{
-        //}
-        #endregion
-
-        #region Multipath Inheritance
-        //Please see Multiple Inheritance section, it is implimented by inclusion of WoodenFurniture class
-        class WoodenFurniture
-        { }
-
-        #endregion
-
+    class EntryPoint
+    {
         //Entry Point
         static void Main(string[] args)
         {

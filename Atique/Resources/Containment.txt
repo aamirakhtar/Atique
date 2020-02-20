@@ -1,0 +1,45 @@
+-OOP(Containment):-
+When you have object of a different class in a class as a property.
+
+-"Has a" relation.
+
+class A
+{
+	public B property1 { get; set;}
+}
+
+class B
+{
+}
+
+1-Composition:-
+	When we have dependency of a child on a parent.
+
+Human
+{
+	Hand hand {get;set;}
+	Brain brain {get;set;}
+	
+	House house {get;set;}
+	Cloth pant {get;set;}
+	Food food {get;set;}
+}
+
+House
+{
+	BedRoom room1 {get;set;}
+	DrawingRoom room2 {get;set;}
+	WashroomRoom room2 {get;set;}
+}
+
+2-Aggregation
+	When we dont have dependency of a child on a parent.
+
+eg:-
+
+FinanceDepartment
+{
+	Employee employees {get;set;}
+	FixAsset assets {get;set;}
+}
+

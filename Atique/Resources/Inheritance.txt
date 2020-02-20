@@ -1,4 +1,6 @@
--OOP(Object Oriented Programming/paradigm)
+-OOP(Object Oriented Programming/paradigm) OOP Pillars:-
+
+1-Inheritance
 2-Containment
 3-Encapsulation
 4-Polymorphism
@@ -11,13 +13,17 @@ Why OOP:-
 -Bcz of sequential programming in past
 -Real life problems cannot be implimented by sequential or functional paradigms
 -OOP is inspired by real life objects and their relationships
+-Code Reuseability
 
 Class/Objects
 
 Class:-
--Recepie/Definition/Blue Print
+	-Recepie/Definition/Blue Print... its nothing but a User Defined Data Type
+	-Type/DataType/Class/ReferenceType
 -Properties
+	-Property/Tuple/Attribute/Feature/Member/Class Member/Member Variable/Class Member Variable
 -Functions
+	-Function/Method/Member/Class Member/Class Member Method/Class Member Function
 
 Object:-
 when you instantiate a class it means you created object of the class.

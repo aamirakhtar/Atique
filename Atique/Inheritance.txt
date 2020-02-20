@@ -1,4 +1,5 @@
--OOP(Object Oriented Programming/paradigm)
+-OOP(Object Oriented Programming/paradigm) OOP Pillars:-
+1-Inheritance
 2-Containment
 3-Encapsulation
 4-Polymorphism
