@@ -51,6 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Containment.png" />
     <Content Include="Resources\Containment.txt" />
     <Content Include="Resources\Inheritance.png" />
     <Content Include="Resources\Inheritance.txt" />
