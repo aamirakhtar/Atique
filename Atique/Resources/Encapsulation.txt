@@ -1,0 +1,46 @@
+-Encapsulation:-
+To hide properties or methods/functions of the class to not be accessed by the outer world or other objects.
+
+eg:
+Human
+{
+	private string legs {get;set;}
+	private string hands {get;set;}
+	private string brain {get;set;}
+
+	public string mobilePhone {get;set;}
+}
+
+AccessModifiers:-
+
+public:-
+	-Any object can access that property or method.
+private:-
+	-No object can access that property or method, except its own properties and methods.
+protected:-
+	-Its just like a private access modifier for other objects, but it behaves like a public access modifier for its own inheritance heirarchy.
+internal:-
+	-it behaves like public inside the library/DLL/Class Library/Assembly or .exe, but cannot be accessed by the outside world and behaves like private.
+internal protected:-
+
+
+Dot Net File Types:-
+2 types of basic files:- 
+Output of the project build(Project Types):-
+-3 Types of the projects.
+
+1-.exe: executable file. //Console application
+2-.dll: re-usable file. //Library/DLL/Class Library/Assembly
+3-Windows Application. //DLL
+
+Solution:-
+Collection of projects.
+
+Project:-
+Collection of namespaces. (Logical Grouping of similar namespaces)
+
+Namespace:-
+Collection Classes. Logical Grouping of similar classes.
+
+Note:-
+In Dot Net, by default for any property/method or class the access modifier is "private".

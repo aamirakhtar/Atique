@@ -135,7 +135,7 @@ namespace Atique.Inheritance
     class EntryPoint
     {
         //Entry Point
-        static void Main(string[] args)
+        static void xxMain(string[] args)
         {
             Teacher t = new Teacher();//single level
             MathsTeacher mt = new MathsTeacher();//multi level
