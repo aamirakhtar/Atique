@@ -1,0 +1,14 @@
+-Polymorphism:-
+Same name of the property or function/method, but different Behaviours.
+
+1-Dynamic Polymorphism (Overriding):-
+Inheritance is a must.
+Specialization.
+
+2-Static Polymorphism (Overloading):-
+Inheritance is not must.
+
+Rules:-
+a-Number of the parameters.
+b-Type fo the parameters
+c-order of the type fo the parameters

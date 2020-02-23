@@ -57,7 +57,7 @@ namespace Atique
 
     class EntryPoint
     {
-        public static void Main()
+        public static void encMain()
         {
             Yaris2010 y = new Yaris2010();
             //y.engine = "1kr";// due to protected access modifier it cannot be accessed outside the its own class or its heirarchy.

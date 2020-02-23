@@ -46,12 +46,14 @@
     <Compile Include="Containment.cs" />
     <Compile Include="Encapsulation.cs" />
     <Compile Include="Inheritance.cs" />
+    <Compile Include="Polymorphism.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Polymorphism.txt" />
     <Content Include="Resources\Encapsulation.txt" />
     <Content Include="Resources\Containment.png" />
     <Content Include="Resources\Containment.txt" />

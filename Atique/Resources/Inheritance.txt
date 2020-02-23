@@ -5,9 +5,9 @@
 3-Encapsulation
 4-Polymorphism
 5-Abstraction
-5-Specialization
-6-Generalization
-7-Interfaces
+6-Specialization
+7-Generalization
+8-Interfaces
 
 Why OOP:-
 -Bcz of sequential programming in past
