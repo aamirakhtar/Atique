@@ -46,6 +46,7 @@
     <Compile Include="Containment.cs" />
     <Compile Include="Encapsulation.cs" />
     <Compile Include="Inheritance.cs" />
+    <Compile Include="Abstraction.cs" />
     <Compile Include="Polymorphism.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Abstraction.txt" />
     <Content Include="Resources\Polymorphism.txt" />
     <Content Include="Resources\Encapsulation.txt" />
     <Content Include="Resources\Containment.png" />

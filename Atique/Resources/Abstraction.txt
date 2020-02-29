@@ -1,0 +1,37 @@
+﻿Abstraction:-
+Its a concept or idea.
+
+1-When you dont Bother about the functionality:-
+a-Abstraction is something in which you suppose to bother about the real functionality, and leave the concered
+party to bother about that.
+
+eg:-
+Coffee maker:-
+Coffee maker provides you simple interface to make a coffee and you dont suppose to 
+bother about the real functionality of the coffee maker.
+
+eg:-
+Drive functionality provides you simple interface to drive any car but the real functionality can be very complex
+and hidden from you. and you dont suppose to bother about that.
+
+eg:-
+Facebook commenting:-
+Commenting functionality provides you simple interface to just select post and write a comment in the comment section.
+where as the real functionality is hidden from you and you dont suppose to bother that, facebook will be bothered about that.
+
+2-When you are at the Top Level:-
+b-When you are at the "top level or at the conceptual level" then you dont have to bother about the details or the 
+real functionality of the different objects.
+
+eg:-Forming a car company, then you will think about the basic types of the cars you will be making, 
+what features and price bracket and audience will it cater.
+
+3-In abstraction object cannot be made:-
+Because we dont have functionalites specified or property values specified.
+
+
+Technical Point:-
+Object cannot be made.
+Abstract class can have concrete property or functionality
+Concrete class cannot have any abstract property or functionality
+Children must impliment all the abstract members of abstract parent.
