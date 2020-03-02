@@ -30,8 +30,8 @@ what features and price bracket and audience will it cater.
 Because we dont have functionalites specified or property values specified.
 
 
-Technical Point:-
-Object cannot be made.
-Abstract class can have concrete property or functionality
-Concrete class cannot have any abstract property or functionality
-Children must impliment all the abstract members of abstract parent.
+Technical Points:-
+1-Object cannot be made.
+2-Abstract class can have concrete property or functionality
+3-Concrete class cannot have any abstract property or functionality
+4-Children must implement all the abstract members of abstract parent.
