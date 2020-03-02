@@ -49,11 +49,14 @@
     <Compile Include="Abstraction.cs" />
     <Compile Include="Polymorphism.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Dot Net.txt" />
+    <Content Include="Resources\Interface.txt" />
     <Content Include="Resources\Abstraction.txt" />
     <Content Include="Resources\Polymorphism.txt" />
     <Content Include="Resources\Encapsulation.txt" />

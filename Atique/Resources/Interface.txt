@@ -1,0 +1,12 @@
+﻿Interface:-
+
+Its a specialized form of abstraction/abstract class.
+We call it Contract.
+
+Just like contract Both the parties that are classes means, Parent and the child class agree on all methods/properties given in a parent class.
+
+Technically child class must implement all the parent members.
+
+because Interface has all the members abstract by default.
+
+So all the members of the child class implementing/inheriting interface members, must implement that interface members.

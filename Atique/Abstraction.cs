@@ -85,7 +85,7 @@ namespace Atique.Abstraction
 
     class EntryPoint
     {
-        public static void Main()
+        public static void AbstractMain()
         {
             //IPhone obj = new IPhone();//object cannot be made bcz its a concept or abstract class
 
