@@ -26,7 +26,7 @@ c-Normal Jit: Compile only those methods which are changed or running at runtime
 Legend: "-->" output
 
 Compilation Process (Universal Process):-
-	Compiler --> IL--> Object Code --> Linking --> Exe/dll
+	.Net Compiler --> IL--> JIT --> Object Code --> Linking --> Exe/dll
 
 Compilation is project wise.
 
