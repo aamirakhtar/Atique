@@ -1,0 +1,15 @@
+﻿In Dot Net we have 2 Types of type systems:-
+
+1-Reference Types (User Define Type):-
+	a-All classes
+	b-Objects of reference types create on "Heap". Heap is the allocation in RAM for dynamic memory.
+	c-Copy by reference.
+
+	eg: string, all user defined classes/types.
+
+2-Value Types (Primitive/Builtin/Value Types):-
+	a-All structurs or in c# structs.
+	b-instances of value types create on "stack". Stack is the allocation in RAM for static memory.
+	c-Copy by Value.
+
+	eg: int, bool, float, double, byte, short, uint, structs.

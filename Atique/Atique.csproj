@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Containment.cs" />
+    <Compile Include="CSharp.cs" />
     <Compile Include="Encapsulation.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Abstraction.cs" />
@@ -64,6 +65,8 @@
     <Content Include="Resources\Containment.txt" />
     <Content Include="Resources\Inheritance.png" />
     <Content Include="Resources\Inheritance.txt" />
+    <Content Include="Resources\Reference Types and Copy Constructor.png" />
+    <Content Include="Resources\Reference-Value-Types.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessService\DataAccessService.csproj">

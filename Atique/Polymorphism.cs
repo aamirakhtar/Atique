@@ -140,7 +140,7 @@ namespace Atique
 
     class EntryPoint1
     {
-        public static void Main()
+        public static void PolymorphismMain()
         {
             Console.WriteLine("*************************Iphone 5s**************************");
             IPhone5s iphone5s = new IPhone5s();
