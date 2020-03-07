@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 //Namespace is just like a folder.. just the storage mechanism is different. Folder provides physical grouping of files, while namespace provides logical grouping
-namespace Atique.CSharp.Constructors
+namespace Atique.CSharp.ConstructorsCopyByRefAndValue
 {
     /*
      * There are 3 types constructors
