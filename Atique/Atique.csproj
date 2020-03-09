@@ -67,6 +67,7 @@
     <Content Include="Resources\Inheritance.txt" />
     <Content Include="Resources\Reference Types and Copy Constructor.png" />
     <Content Include="Resources\Reference-Value-Types.txt" />
+    <Content Include="Resources\StaticClass.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessService\DataAccessService.csproj">

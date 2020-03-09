@@ -1,0 +1,25 @@
+﻿Static Class:-
+
+1-We cannot create objects of static class explicitly.
+2-Only one copy of the object is implicitly created by C#, whose name is same as the class name.
+3-It can only contains static members.
+4-Non static members cannot be created in static class, 
+ bcz for non static memberss to be used, we have to create objects, but in static class we cannot create objects explicitly.
+
+ Static Members in a Non Static Class:-
+
+ 1-Non static class can contain both static and non-static members.
+ 2-Static members cannot access non-static members.
+ 3-But non-static members can access static members.
+
+ eg:-Petrol pump is static/shared b/w users. So users can access petrol pump. ie: non-static can acces static member. (point-3)
+ but petrol pump cannot access users. ie: static member cannot access non-static members. (point-2)
+
+Static class is nothing but "singleton design pattern"
+
+Static Constructor cannot be public/private/protected bcz, atleast one object is still implicitly created by C#, though you cannot 
+create any object explicitly and the one which is created, is only by c#, so you cannot change anything about the static constructor.
+
+Static constructor executes before all the constructors.
+
+Static Class cannot be inherited.

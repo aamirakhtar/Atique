@@ -19,6 +19,13 @@ namespace Atique.CSharp.ConstructorsCopyByRefAndValue
 
     public class Vitz
     {
+        //You cannot change anything about the static constructor, bcz only one object is created by c# which is implicit.
+        //You cannot provide overloaded static constructor as well for the same reason.
+        //This constructor always fires before all the constructors.
+        static Vitz()
+        {
+        }
+
         //1-Default Constructor
         public Vitz()
         {
@@ -81,6 +88,63 @@ namespace Atique.CSharp.ConstructorsCopyByRefAndValue
         }
     }
 
+    public static class DataLayer
+    {
+        public static void GetData()
+        {
+            Console.WriteLine("Get Data is called.");
+        }
+
+        public static void DeleteData(int id)
+        {
+            Console.WriteLine("Dete is deleted.");
+        }
+
+        public static void UpdateData(int id)
+        {
+            Console.WriteLine("Data is updated.");
+        }
+
+        public static void GetUserInfo(int userId)
+        {
+            Console.WriteLine("Fetching the data of user from DB and returning back.");
+        }
+    }
+
+
+    public class OrthopediacSurgeon
+    {
+        static OrthopediacSurgeon()
+        {
+            Console.WriteLine("Default static constructor.");
+        }
+
+        public OrthopediacSurgeon()
+        {
+            Console.WriteLine("Default non-static constructor.");
+        }
+
+        public string CNIC { get; set; }
+        public string Address { get; set; }
+        public string FirstName { get; set; }
+        public string LasttName { get; set; }
+        public string Gender { get; set; }
+        public string FingerPrints { get; set; }
+
+        public static void Sleep()
+        {
+            //FirstName = "aamir"; Non static member cannot be accessed by static member
+            Console.WriteLine("Sleeping.");
+        }
+
+        public void Surgery()
+        {
+            DataLayer.DeleteData(1);
+            Sleep(); //Static member can be accessed by non static member
+            Console.WriteLine("Orthopadiac Surgery");
+        }
+    }
+
     /*
      * 1-Reference Types
      * 2-Value Types
@@ -124,6 +188,24 @@ namespace Atique.CSharp.ConstructorsCopyByRefAndValue
 
             Console.WriteLine(b);
             Console.WriteLine(i);
+
+            DataLayer.DeleteData(1);
+            DataLayer.UpdateData(1);
+
+            OrthopediacSurgeon ortho1 = new OrthopediacSurgeon();
+            ortho1.FirstName = "aamir";
+            ortho1.LasttName = "akhtar";
+            OrthopediacSurgeon.Sleep();
+
+            OrthopediacSurgeon ortho2 = new OrthopediacSurgeon();
+            ortho1.FirstName = "ateeque";
+            ortho1.LasttName = "azam";
+            OrthopediacSurgeon.Sleep();
+
+            OrthopediacSurgeon ortho3 = new OrthopediacSurgeon();
+            ortho1.FirstName = "noman";
+            ortho1.LasttName = "iqbal";
+            OrthopediacSurgeon.Sleep();
 
             Console.ReadLine();
         }

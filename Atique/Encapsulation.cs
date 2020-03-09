@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Atique
 {
-    class Human
+    public class Human
     {
         private string legs { get; set; }
         private string hands { get; set; }
