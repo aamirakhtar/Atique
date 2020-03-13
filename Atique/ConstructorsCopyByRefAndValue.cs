@@ -152,7 +152,7 @@ namespace Atique.CSharp.ConstructorsCopyByRefAndValue
 
     public class EntryPoint
     {
-        public static void Main()
+        public static void ConstructorsMain()
         {
             Vitz v = new Vitz();
 
