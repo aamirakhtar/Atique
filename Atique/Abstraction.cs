@@ -11,6 +11,7 @@ namespace Atique.Abstraction
     //a-When you dont suppose to bother about the functionality when using something
     abstract class CoffeeMaker
     {
+        //Function declaration
         public abstract void CoffeeMaking();
     }
 

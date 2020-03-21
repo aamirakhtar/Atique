@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace Atique.CSharp.Basics
     {
         public static void Main()
         {
+            #region A-Coding conventions
             /*
              * A-Coding conventions:-
              * 1-Camel casing: first letter is small and rest start from capital letters, its used for variable names, function parameters
@@ -25,7 +27,9 @@ namespace Atique.CSharp.Basics
              * increment operators: i+=1 => i = i + 1
              * i-=1, i = i - 1
              */
+            #endregion
 
+            #region B-Prefix and postfix
             //B-Prefix and postfix
             /*
             Console.WriteLine("aamir" + "akhtar");
@@ -47,7 +51,9 @@ namespace Atique.CSharp.Basics
             */
 
             //Console.WriteLine();
+            #endregion
 
+            #region C-Primitive Type Casting
             //C-Primitive Type Casting
             /*
             int i = Convert.ToInt32(1 + 3.4); //explicit type conversion
@@ -63,7 +69,9 @@ namespace Atique.CSharp.Basics
             //When we suppose to convert string into some primitive type then we ue like type.Parse()
             //WHen we suppose to convert any type into another type then we use bracket notation () or can use Convert class
             */
+            #endregion
 
+            #region D-User Defined Type Casting
             //D-User Defined Type Casting
             /*
             //You can only convert child objects into parent objects, and type conversion for user defined types can only be possible withing the heirarchy.
@@ -80,7 +88,9 @@ namespace Atique.CSharp.Basics
             object obj = new Calculator();
             Calculator calc = (Calculator)obj;
             */
+            #endregion
 
+            #region E-String formatting
             //E-String formatting
             /*
             Console.Write("Enter Subject Name: ");
@@ -100,7 +110,9 @@ namespace Atique.CSharp.Basics
             string format = "You got '{1}' numbers in the subject '{0}'.";
             Console.WriteLine(format, subject, number);// here {0} and {1} means positions of the variables to display
             */
+            #endregion
 
+            #region F-Control Structures
             //F-Control Structures
             /*
             Console.Write("Please Enter week day number: ");
@@ -153,7 +165,9 @@ namespace Atique.CSharp.Basics
                     break;
             }
             */
+            #endregion
 
+            #region G-Turnary operator
             //G-Turnary operator
             /*
             Console.Write("Please enter number to find even or odd: ");
@@ -170,7 +184,9 @@ namespace Atique.CSharp.Basics
 
             Console.WriteLine(msg);
             */
+            #endregion
 
+            #region H-Iterative Structures
             //H-Iterative Structures:- To do one task repetetively.
             //1-for
             //2-while
@@ -211,6 +227,98 @@ namespace Atique.CSharp.Basics
             }
             while (key == "y");
             */
+            #endregion
+
+            #region I-Unconditional Structures
+            //i-Unconditional Structures:-
+            //1-break:
+            //its used in switch and loops, it breaks the further execution of switch or loop
+            //2-continue
+            //it continues the execution of loop skipping particular iteration
+            //its used in loops
+            //3-goto
+            //4-return
+
+            //1-break
+            /*int counter = 0;
+            while(true)
+            {
+                if (counter == 10)
+                    break;
+
+                Console.WriteLine("{0}-Ateeque", counter);
+                counter++;
+            }*/
+
+            //2-continue
+            /*for (int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                    continue;
+
+                Console.WriteLine("Email send to user id: {0}", i);
+            }*/
+
+            //3-goto:
+            //its goto label statement, it will transfer control to particular label of the program
+            /*ConsoleKey key;
+            print_table_again:
+
+            Console.Write("Please Enter any number to print table: ");
+            int number = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10; i++)
+            {
+                int value = number * i;
+                Console.WriteLine($"{number} x {i} = {value}");
+            }
+
+            Console.Write("If you want to try another number, please press ENTER: ");
+            key = Console.ReadKey().Key;
+            Console.WriteLine();
+
+            if (key == ConsoleKey.Enter)
+                goto print_table_again;
+
+            print_name:
+            Console.WriteLine("Ateeque");
+
+            ConsoleKey key = Console.ReadKey().Key;
+
+            if (key == ConsoleKey.Enter)
+                goto print_name;
+                */
+            //4-return:
+            //Its used in functions/properties to return particular value;
+            //It only only returns single object/value
+
+            //Calculator cal = new Calculator();
+
+            //int sum = cal.Add(4, 2, 3);//Function calling, function execution
+
+            //Console.WriteLine(sum);
+
+            #endregion
+
+            #region J-Getter Setter
+
+            Ateeque a = new Ateeque();
+            Console.WriteLine(a.Name);//read only property means it only has getter
+            a.JobDescription = "IT Manager";//it calls a setter
+            Console.WriteLine(a.JobDescription);//it calls a getter
+            #endregion
+
+        }
+
+        public class Calculator
+        {
+            //signature of the function
+            //access_modifier return_type name_of_the_function(type_of_parameter1 parameter1, type_of_parameter2 parameter2,....)
+            //Function Definition
+            public int Add(int a, int b, int c) 
+            {
+                return a + b + c;
+            }
         }
 
         public class Car
@@ -228,9 +336,36 @@ namespace Atique.CSharp.Basics
 
         }
 
-        public class Calculator
+        /// <summary>
+        /// Getter Setter
+        /// </summary>
+        public class Ateeque
         {
+            //public string Name { get; set; }
 
+            //Read only property
+            public string Name
+            {
+                //Getter
+                get
+                {
+                    return "Ateeque";
+                }
+            }
+
+            public string JobDescription
+            {
+                //Getter
+                get
+                {
+                    return JobDescription;
+                }
+                //Setter
+                set
+                {
+                    JobDescription = value;
+                }
+            }
         }
     }
 }
