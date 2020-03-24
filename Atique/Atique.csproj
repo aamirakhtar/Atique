@@ -57,6 +57,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Exception Handeling.txt" />
     <Content Include="Resources\Dot Net.txt" />
     <Content Include="Resources\Interface.txt" />
     <Content Include="Resources\Abstraction.txt" />

@@ -1,0 +1,11 @@
+﻿Exception Handeling:-
+
+
+CheckLoginCredentials() throw exception("Authentication Failed.")
+
+Checkout() throw exception("inventory not available")
+
+
+Transactions:-
+ACID (atomicity, consistency, isolation, durability)
+

@@ -302,12 +302,133 @@ namespace Atique.CSharp.Basics
 
             #region J-Getter Setter
 
-            Ateeque a = new Ateeque();
-            Console.WriteLine(a.Name);//read only property means it only has getter
-            a.JobDescription = "IT Manager";//it calls a setter
-            Console.WriteLine(a.JobDescription);//it calls a getter
+            //Ateeque a = new Ateeque();
+            //Console.WriteLine(a.Name);//read only property means it only has getter
+            //a.JobDescription = "IT Manager";//it calls a setter
+            //Console.WriteLine(a.JobDescription);//it calls a getter
             #endregion
 
+            #region K-Functions
+
+            //Circle c = new Circle();
+
+            ////function calling, function call, function invokation
+            //double area = c.Area(2); // A function which returns some value, should be saved in some variable for further usage
+            //Console.WriteLine(area);
+
+            #endregion
+
+            #region L-Exception Handeling
+            //Exception (Crash situation)
+
+            /*Keywords:-
+             * try
+             * catch
+             * throw
+             * finally 
+             */
+
+            //DBAccess dbAccess = new DBAccess();
+
+            //try
+            //{
+            //    string userName = dbAccess.GetUserName(1);
+
+            //    string userNameLower = userName.ToLower();
+
+            //    Console.WriteLine(userNameLower);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+
+            ShoppingCart cart = new ShoppingCart();
+            try
+            {
+                cart.Authenticate("aamir", "12345678");
+                cart.Checkout(1004);
+                cart.AcceptPaymentViaPayPal("41111111111111113");
+            }
+            catch(Exception ex) //It will run in case of failure only
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally//it will run in all cases (failuer or not)
+            {
+                cart.RemoveProductFromCart(1004);
+            }
+
+            ShoppingCart cart1 = new ShoppingCart();
+
+            cart1.Authenticate("aamir", "12345678");//Here we are handeling the exception inside Authenticate function, so when the authentication failed
+            // the exception is handelled inside the function so the remaining ones will be invoked. Which should not be the case.
+
+            try
+            {
+                cart1.Checkout(1004);
+                cart1.AcceptPaymentViaPayPal("41111111111111113");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.ReadLine();
+
+            #endregion
+        }
+
+        public class ShoppingCart
+        {
+            public void Authenticate(string userId, string password)
+            {
+                try
+                {
+                    throw new Exception("Authentication failed.");
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            public void Checkout(int productId)
+            {
+                //throw new Exception("Product not available.");
+            }
+
+            public void AcceptPaymentViaPayPal(string ccNo)
+            {
+                //throw new Exception("Credit Card number not valid.");
+            }
+
+            public void RemoveProductFromCart(int productId)
+            {
+
+            }
+        }
+
+        public class DBAccess
+        {
+            public string GetUserName(int id)
+            {
+                string userName = "aamir";//lets assume its coming from db
+
+                //lets assume db connection is crashed, and assume we cant get user Name value and defualt null is assigned
+                userName = null;
+                return userName;
+            }
+        }
+
+        public class Circle
+        {
+            //function definition, callee
+            public double Area(double radius)// A function having return type, must have return statement
+            {
+                return 2 * 3.214 * radius;
+            }
         }
 
         public class Calculator
@@ -315,9 +436,29 @@ namespace Atique.CSharp.Basics
             //signature of the function
             //access_modifier return_type name_of_the_function(type_of_parameter1 parameter1, type_of_parameter2 parameter2,....)
             //Function Definition
-            public int Add(int a, int b, int c) 
+            public int Add(int a, int b, int c)
             {
                 return a + b + c;
+            }
+
+            public float Add(float a, float b) //a and b are the parameters of the function
+            {
+                return a + b;
+            }
+
+            public double Add(double a, double b)
+            {
+                return a + b;
+            }
+
+            public double Sub(double a, double b)
+            {
+                return a - b;
+            }
+
+            public void print_ans(double ans)
+            {
+                Console.WriteLine(ans);
             }
         }
 
