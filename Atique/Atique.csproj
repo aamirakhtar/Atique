@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Arrays.png" />
+    <Content Include="Resources\C# Course.txt" />
     <Content Include="Resources\Exception Handeling.txt" />
     <Content Include="Resources\Dot Net.txt" />
     <Content Include="Resources\Interface.txt" />

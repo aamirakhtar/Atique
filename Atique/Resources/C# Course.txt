@@ -1,0 +1,133 @@
+#- OOP:-
+Containment
+Inheritence
+Encapsulation
+Polymorphism 
+Abstraction 
+(Specialization)
+(Generalization)
+
+C# Course Contents:-
+
+Dot net Framework:-
+
+1-CLR:-
+Its a virtual machine component of the dot net framework
+
+Basic CLR elements:-
+JIT:-
+Pre - JIT
+    In Pre-JIT compilation, complete source code is converted into native code in a single cycle (i.e. compiles the entire code into native code in one stretch)
+    This is done at the time of application deployment.
+Econo - JIT
+    In Econo-JIT compilation, the compiler compiles only those methods that are called at run time.
+    After execution of this method the compiled methods are removed from memory.
+Normal - JIT
+    In Normal-JIT compilation, the compiler compiles only those methods that are called at run time.
+    After executing this method, compiled methods are stored in a memory cache.
+    Now further calls to compiled methods will execute the methods from the memory cache.
+
+	
+2-CTS
+Common Type System
+responsible of managing
+Value types.
+Reference types.
+
+3-CLS is a subset of CTS:-
+Microsoft has defined CLS which are nothing but guidelines that language to follow so that it can communicate with other .NET languages in a seamless manner.
+
+CTS and CLS ensures language interoperability
+
+
+4-.Net Framework Class Library
+
+*******************************************
+
+#-Assemblies exe and dll, ildasm:-
+
+#-First Program Console:- 
+Hello World describing namespaces naming conventions
+coding conventions (casings) camel, pascal
+
+Writing reading from to console.
+
+#-Type System 
+Value types, Reference Types
+Memory allocation
+Heap allocation
+
+#-Debugging:-
+
+#-Arithmatic Operations:-
+Operators
+Post fix operators
+Prefix Operators
+string concatination operators
+
+#-Static and non Static variables and storage:-
+
+#-Type Casting:-
+Double
+int
+float etc conversions
+
+Writing with prompt and variables on console like {0}.
+
+Static Classes:-
+
+Enumerations:-
+
+#-Control structures:-
+Conditional:-
+if
+if else
+else if
+switch
+
+Iterative:-
+for
+while
+do while
+foreach
+
+Unconditional:-
+Break
+Continue
+goto
+return
+
+#-Getter Setter:-
+
+#-Functions:-
+
+#-Exception Handeling:-
+
+#-Arrays:-
+
+#-Lists (ArrayList)
+
+#-Generic Lists (Templated Lists)
+
+#-Params:-
+
+#-Arrays and Foreach:-
+
+#-DLLs and reference to dlls:-
+
+#-Linq:-
+
+#-Dynamic, var.
+
+#-Extensions:-
+
+#-C# Generics (Templates):-
+
+#-Protected, Internal and Protected-Internal
+
+#-Structures:-
+
+#-Delegates and Events:-
+
+#-Multi Threading:-
+******************************************* End
