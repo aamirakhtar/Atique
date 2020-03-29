@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayAndLists.cs" />
     <Compile Include="CSharpBasics.cs" />
     <Compile Include="Containment.cs" />
     <Compile Include="ConstructorsCopyByRefAndValue.cs" />

@@ -9,7 +9,7 @@ namespace Atique.CSharp.Basics
 {
     public class EntryPoint
     {
-        public static void Main()
+        public static void CSharpBasicsMain()
         {
             #region A-Coding conventions
             /*
