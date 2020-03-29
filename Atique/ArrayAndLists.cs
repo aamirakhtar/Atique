@@ -8,8 +8,39 @@ namespace Atique.ArrayAndLists
 {
     class EntryPoint
     {
+        public class User
+        {
+            public string Name { get; set; }
+            public string Address { get; set; }
+            public string Gender { get; set; }
+
+            public Vitz1999[] vitzCars { get; set; }
+
+            public User()
+            {
+                vitzCars = new Vitz1999[5];
+            }
+        }
+
+
         public static void Main()
         {
+            User[] users = new User[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                users[i] = new User() { Name = string.Format("user{0}", i), Address = "Karachi", Gender = "Male" };
+                Console.WriteLine("[{3}] User Name: {0}, Address: {1}, Gender: {2}", users[i].Name, users[i].Address, users[i].Gender, i);
+
+                for (int j = 0; j < 5; j++)
+                {
+                    users[i].vitzCars[j] = new Vitz1999();
+
+                    Console.WriteLine("[{3},{4}]=Engine: {0}, Steering: {1}, Brakes: {2}", users[i].vitzCars[j].engine, users[i].vitzCars[j].steering, users[i].vitzCars[j].brakes, i, j);
+                }
+
+            }
+
             /*Array:-
              * 1-We can create many variables of the same type in RAM with one name
              * 2-All the variables are created in contigious memory locations.
