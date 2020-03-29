@@ -165,6 +165,10 @@ namespace Atique.ArrayAndLists
 
             #endregion
 
+            //Assignments:
+            // make single dimensional array of 10 elements and take input from user and print all taken values to screen.
+            // make two dimensional array of 10 elements and take input from user and print all taken values to screen.
+
             Console.ReadLine();
         }
     }
