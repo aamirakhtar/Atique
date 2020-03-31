@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Atique.ArrayAndLists
 {
-    class EntryPoint
+    partial class EntryPoint
     {
         public class User
         {
@@ -23,7 +23,7 @@ namespace Atique.ArrayAndLists
         }
 
 
-        public static void Main()
+        public static void ArrayMain()
         {
             User[] users = new User[10];
 
@@ -67,7 +67,7 @@ namespace Atique.ArrayAndLists
                 Console.WriteLine("[{0}] = {1}", i, arr[i]); //read array variable via index
             }
 
-            int t = arr[2]; //Accessing third variable of an array
+            int t = arr[2]; //Accessing third variable of an array in a single clock cycle
 
             Vitz1999[] arrVitz = new Vitz1999[10]; // It means we have 10 vitz1999 objects in memory, on contigous locations
             // on compile time it will calculate the size of single object of Vitz1999 and allocate block size of 10 variables in RAM.
@@ -169,7 +169,124 @@ namespace Atique.ArrayAndLists
             // make single dimensional array of 10 elements and take input from user and print all taken values to screen.
             // make two dimensional array of 10 elements and take input from user and print all taken values to screen.
 
+            #region Addition/Delete in arrays
+            //It must not be coded
+            //Addition at the end/start of an array (Append)
+            /*
+            int[] arr1 = new int[100000];
+            int[] arr2 = new int[100000 + 10];
+
+            for (int i = 0; i < 100000; i++)
+            {
+                arr2[i] = arr1[i];
+            }
+
+            arr1 = null;
+            arr2[100000] = 54;
+
+            //Deletion at the end of an array
+            int[] arr3 = new int[100000];
+            int[] arr4 = new int[100000 - 10];
+
+            for (int i = 0; i < 100000 - 10; i++)
+            {
+                arr4[i] = arr3[i];
+            }
+
+            arr3 = null;
+
+            //Addition at the 50th position of an array (Append)
+            int[] arr5 = new int[100];
+            int[] arr6 = new int[101];
+
+            for (int i = 0; i < 50; i++)
+            {
+                arr6[i] = arr5[i];
+            }
+
+            arr6[50] = 21; //new element
+
+            for (int i = 50; i < 100; i++)
+            {
+                arr6[i + 1] = arr5[i];
+            }
+
+            //Deletion at the 50th position of an array (Append)
+            int[] arr7 = new int[100];
+            int[] arr8 = new int[99];
+
+            for (int i = 0; i < 50; i++)
+            {
+                arr8[i] = arr7[i];
+            }
+
+            for (int i = 51; i < 100; i++)
+            {
+                arr8[i] = arr7[i];
+            }
+
+            arr7 = null;
             Console.ReadLine();
+            */
+            #endregion
+
+            #region Link List
+            /*
+            LList list = new LList();
+            //Link List
+            int nodeCounter = 0;
+            while (list.node.next != null)
+            {
+                Node node = list.node;
+
+                if (nodeCounter == 3)
+                {
+                    //Third Node's next pointer is pointeed towards new node
+                    Node newNode = new Node() { data = 69 };
+
+                    //newNode.next = thirdNode.next.next;
+                    newNode.next = node.next.next; // 4th node
+                    node.next = newNode;
+                    break;
+                }
+
+                node = node.next;
+
+                nodeCounter++;
+            }
+
+
+            //get particular at particular position in list
+            nodeCounter = 0;
+            while (list.node.next != null)
+            {
+                Node node = list.node;
+                if (nodeCounter < 50000)
+                {
+                    Console.WriteLine(node.data);
+                    break;
+                }
+
+                node = node.next;
+            }
+
+            Console.WriteLine(arr1[50000]);
+            */
+            #endregion
+
+            //In case of Arrays addition/deletion is costly but reading/getting is efficient
+            //Where as in case of list addition/deletion is effecient but reading/getting is costly
+        }
+
+        class Node
+        {
+            public object data { get; set; }
+            public Node next { get; set; }
+        }
+
+        class LList
+        {
+            public Node node { get; set; }
         }
     }
 }

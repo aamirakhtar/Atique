@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayList.cs" />
     <Compile Include="ArrayAndLists.cs" />
     <Compile Include="CSharpBasics.cs" />
     <Compile Include="Containment.cs" />
