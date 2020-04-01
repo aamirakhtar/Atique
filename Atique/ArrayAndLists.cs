@@ -23,7 +23,7 @@ namespace Atique.ArrayAndLists
         }
 
 
-        public static void ArrayMain()
+        public static void Main()
         {
             User[] users = new User[10];
 

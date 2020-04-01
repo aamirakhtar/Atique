@@ -81,7 +81,7 @@ namespace Atique.Arraylist
             //So it has single clock cycle reading capbility of arrays
             //It has addition/deletion of single clock cycle like link list
             //Plus we can specify the type of whole list to get rid of type casting.
-            //And we can use LINQ in templated lists which is not the part of array or arraylist
+            //And we can use LINQ in templated lists which is not the part of arraylist
 
             #endregion
 
@@ -92,7 +92,6 @@ namespace Atique.Arraylist
             // It behaves like a List of Key Value Pairs
 
             Dictionary<string, string> students = new Dictionary<string, string>();
-
             students.Add("1001", "ateeque");
             students.Add("24567", "aamir");
             students.Add("33213123231", "noman");
