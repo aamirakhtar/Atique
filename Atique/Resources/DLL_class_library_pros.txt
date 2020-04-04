@@ -1,0 +1,30 @@
+﻿DLL/Class Library:-
+
+1-You can have one copy of code and can use in many places just via referencing. Means no redundant code.
+eg- You have Payment Merchant functionality in one dll/class lib, and assume you have 10 websites which are using this functionality,
+then you just need to refer that payment functionality dll.
+
+2-It implements modular approach to the applications.
+
+3-The change will be in only one copy of code. 
+
+4-No requirement of compilation of client applications eg: 10 websites using this, so no website wil be compiled and deployed only that dll will be compiled and ddeployed to all websites.
+
+5-You dont need to bother about details and complexities of the code.
+
+6-Client apps can refer dll written in any of the .net languages.
+eg: 
+Website 1 is in C#.Net
+Website 2 is in C++.Net
+Website 3 is in VB.Net
+Website 4 is in F#.Net
+
+now we Website 2,3,4 can refer DLL written in c#. and so on.
+
+Means client app dont need to bother about the language specifications of the referred DLL.
+
+6-Due to multilingual support You can make international versions of the modules and ship them.
+
+7-You can have multiple versions of the same dll referred in different client applications and you just need to mention in client app which version of dll to use.
+
+8-You dont need to bother about business complexities, you just need to call the functions exposed in dll.

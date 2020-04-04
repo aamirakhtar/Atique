@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atique", "Atique\Atique.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessService", "DataAccessService\DataAccessService.csproj", "{E175604E-7CB7-437A-9931-93D81059E5D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment", "Payment\Payment.csproj", "{3AF3E147-C3B3-48FB-A9DE-1DA459F991C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{42DAF8CD-0BF6-40A5-8115-F717FFE4DBEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{E175604E-7CB7-437A-9931-93D81059E5D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E175604E-7CB7-437A-9931-93D81059E5D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E175604E-7CB7-437A-9931-93D81059E5D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF3E147-C3B3-48FB-A9DE-1DA459F991C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF3E147-C3B3-48FB-A9DE-1DA459F991C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF3E147-C3B3-48FB-A9DE-1DA459F991C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF3E147-C3B3-48FB-A9DE-1DA459F991C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42DAF8CD-0BF6-40A5-8115-F717FFE4DBEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42DAF8CD-0BF6-40A5-8115-F717FFE4DBEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42DAF8CD-0BF6-40A5-8115-F717FFE4DBEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42DAF8CD-0BF6-40A5-8115-F717FFE4DBEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
