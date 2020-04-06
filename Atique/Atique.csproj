@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Atique.Extensions.EntryPoint</StartupObject>
+    <StartupObject>Atique.Linq.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,6 +57,8 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Abstraction.cs" />
+    <Compile Include="Linq.cs" />
+    <Compile Include="OutAndRef.cs" />
     <Compile Include="Params.cs" />
     <Compile Include="Polymorphism.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
