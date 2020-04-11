@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Atique.Linq.EntryPoint</StartupObject>
+    <StartupObject>Atique.LinqJoins</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,6 +58,7 @@
     <Compile Include="Inheritance.cs" />
     <Compile Include="Abstraction.cs" />
     <Compile Include="Linq.cs" />
+    <Compile Include="LinqJoins.cs" />
     <Compile Include="OutAndRef.cs" />
     <Compile Include="Params.cs" />
     <Compile Include="Polymorphism.cs" />
