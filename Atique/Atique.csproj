@@ -77,6 +77,7 @@
     <Content Include="Resources\Dot Net.txt" />
     <Content Include="Resources\Interface.txt" />
     <Content Include="Resources\Abstraction.txt" />
+    <Content Include="Resources\LinqJoins.sql" />
     <Content Include="Resources\Polymorphism.txt" />
     <Content Include="Resources\Encapsulation.txt" />
     <Content Include="Resources\Containment.png" />
