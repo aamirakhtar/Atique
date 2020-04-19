@@ -15,3 +15,9 @@ even though we dont make new() object of struct. Thats why they cannot be null.
 11-There must be small structs used and for those objects which doesnt frequently change. Bcz structs makes copy of whole struct if assigned to new variable.
 12-On the other hand, if a reference is assigned to new variable, both will contains the reference of original object.
 its position and always becomes copy of memory addresses as a referece.
+
+Something about pointers and references:-
+-Pointers can point to different variables and when assigned diff variables to pointers, they wont be
+created multiple copies of pointers in memory. but reference assigned to variable then new reference is created 
+which refers to original object.
+-So means pointers can hop to diff memory addresses dynamically where as reference cannot change its position and always becomes copy of memory addresses as a referece.
