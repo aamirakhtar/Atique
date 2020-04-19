@@ -1,0 +1,17 @@
+﻿Structures:-
+1-They are value types.
+2-They can contain properties and methods
+2-They cannot be inherited by any class or structures.
+3-Though they can implement interfaces.
+4-We cannot define parameterless default contructor. though static and parameterised can be defined. 
+bcz, structures doesnt have null so they implemented their default values, thats why we cannot give our own default constructor functionality
+5-Thats why the Structures always carry objects, the many variables the many objects in memory, means in memory struct variable always point to some object
+even though we dont make new() object of struct. Thats why they cannot be null.
+6-Where as references only carries reference to objects thats why if they dont assign any object they will refer to null location in memory.
+7-Structures cannot contains destructors, bcz they dont reside on heap.
+8-Structures provide better performance as they dont manage on heap so no GC.
+9-They use less system resources as GC wont be working in this case.
+10-Structs always copied by value unlike ref types which contains ref to original object.
+11-There must be small structs used and for those objects which doesnt frequently change. Bcz structs makes copy of whole struct if assigned to new variable.
+12-On the other hand, if a reference is assigned to new variable, both will contains the reference of original object.
+its position and always becomes copy of memory addresses as a referece.

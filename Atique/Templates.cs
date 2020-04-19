@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessService;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -110,7 +112,25 @@ namespace Atique.Templates
             if (i.Equals(5))
                 Console.WriteLine("Equal");
 
+            Book b1 = new Book() { Title = "A", Author = "XYZ", Price = 50 };
+            Book b2 = new Book() { Title = "A", Author = "XYZ", Price = 50 };
+
+            Helper.IsBookCampared(b1, b2);
+
+            Helper.IsCompared<Book>(b1, b2);
+
             Console.ReadLine();
+
+            DataAccessLayer obj = new DataAccessLayer();
+            //obj.connectionString it will not be available here bcz its protected internal, means protected outside the dll
+        }
+    }
+
+    public class A : DataAccessLayer
+    {
+        public A()
+        {
+            this.connectionString = "connection string";
         }
     }
 
@@ -120,18 +140,34 @@ namespace Atique.Templates
         public double Price { get; set; }
     }
 
-    public class Book : Product
+    public class Book : Product, IComparable<Book>
     {
         public string Title { get; set; }
         public string Author { get; set; }
+
+        public int CompareTo(Book book)
+        {
+            if (this.Title == book.Title)
+                return 0;
+            else
+                return 1;
+        }
     }
 
-    public class SmartPhone : Product
+    public class SmartPhone : Product, IComparable<SmartPhone>
     {
         public string Model { get; set; }
         public string Brand { get; set; }
         public int ScreenSize { get; set; }
         public string CameraMP { get; set; }
+
+        public int CompareTo(SmartPhone phone)
+        {
+            if (this.Model == phone.Model && this.Brand == phone.Brand)
+                return 0;
+            else
+                return 1;
+        }
     }
 
     public class Food : Product
@@ -302,7 +338,7 @@ namespace Atique.Templates
             Console.WriteLine("Amount after Tax applied: {0}", product.Price);
         }
 
-        //Normal scenario, it will have parent class as parameter but here is typecasting issue
+        //Normal scenario, it will have parent class as parameter but here is type casting issue
         public static void CalculateTaxN(Product product)
         {
             product.Price = product.Price + 50;
@@ -323,6 +359,22 @@ namespace Atique.Templates
         {
             book.Title = "Fiction";
             Console.WriteLine(book.Title);
+        }
+
+        public static bool IsCompared<T>(T a, T b) where T : IComparable<T>
+        {
+            return a.CompareTo(b) == 0;
+        }
+
+        public static bool IsBookCampared(Book b1, Book b2)
+        {
+            if (b1.Title == b2.Title)
+            {
+                Console.WriteLine("Both books are same.");
+                return true;
+            }
+
+            return false;
         }
 
         #endregion
