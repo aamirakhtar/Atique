@@ -173,3 +173,9 @@ Input from the keyboard, and output on the screen
 
 Assignment:-
 Different scenarios of the same types of inheritance: 02-17-2020
+
+Note:-
+Inheritance is a tightly coupled design bcz changes in parent can cause crash in child
+in ontrast containment is a loosely coupled design and should be more frequently used than inheritance
+
+Abstraction, Interfaces, Events Delegates these all are the tools to implement loosely coupled design
