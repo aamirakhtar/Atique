@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Atique.Structures.EntryPoint</StartupObject>
+    <StartupObject>Atique.EventsAndDelegates.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -54,6 +54,7 @@
     <Compile Include="DLLReference.cs" />
     <Compile Include="DynamicAndAnonymousTypes.cs" />
     <Compile Include="Encapsulation.cs" />
+    <Compile Include="EventsAndDelegates.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Abstraction.cs" />
@@ -100,6 +101,10 @@
     <ProjectReference Include="..\Extensions\Extensions.csproj">
       <Project>{42daf8cd-0bf6-40a5-8115-f717ffe4dbee}</Project>
       <Name>Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileProcessing\FileProcessing.csproj">
+      <Project>{522e5527-3b38-4f8b-b373-2f7b29f637d2}</Project>
+      <Name>FileProcessing</Name>
     </ProjectReference>
     <ProjectReference Include="..\Payment\Payment.csproj">
       <Project>{3af3e147-c3b3-48fb-a9de-1da459f991c7}</Project>
