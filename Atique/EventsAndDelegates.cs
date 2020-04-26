@@ -41,6 +41,8 @@ namespace Atique.EventsAndDelegates
             fileProcessing.notification += SendWatsappMsg; //Subscribe
             fileProcessing.notification -= SendWatsappMsg; //UnSubscribe
 
+            fileProcessing.Process();
+
             //Here fileProcessing.notification is a publisher, and SendEmail, SendSms, SendWatsapp are subscribers.
             //But problem is the delegate is not a true publisher subscriber model bcz we can anytime alter the list of subscribers
 
@@ -56,7 +58,7 @@ namespace Atique.EventsAndDelegates
             fileProcessing1.notificationEvent += SendWatsappMsg; //Subscribe
             fileProcessing1.notificationEvent -= SendWatsappMsg; //UnSubscribe
 
-            fileProcessing.Process();
+            fileProcessing1.Process();
 
             Console.ReadLine();
         }
