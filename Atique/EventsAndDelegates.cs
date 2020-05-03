@@ -10,6 +10,8 @@ namespace Atique.EventsAndDelegates
 {
     class EntryPoint
     {
+        private static int count { get; set; }
+
         public static void Main()
         {
             //Pointers: it can indirectly change the value of a variable without accessing that variable
@@ -33,34 +35,45 @@ namespace Atique.EventsAndDelegates
             //Func f2 = Sub;
             //f2(2, 4);
 
-            //File Processing with Delegate
-            FileProcessing fileProcessing = new FileProcessing();
-            fileProcessing.notification = SendEmail;
-            fileProcessing.notification += SendSms; //Multicast Delegate
-            fileProcessing.notification = null; //Its an alteration of subscription list
-            fileProcessing.notification += SendWatsappMsg; //Subscribe
-            fileProcessing.notification -= SendWatsappMsg; //UnSubscribe
+            ////File Processing with Delegate
+            //FileProcessing fileProcessing = new FileProcessing();
+            //fileProcessing.notification = SendEmail;
+            //fileProcessing.notification += SendSms; //Multicast Delegate
+            //fileProcessing.notification = null; //Its an alteration of subscription list
+            //fileProcessing.notification += SendWatsappMsg; //Subscribe
+            //fileProcessing.notification -= SendWatsappMsg; //UnSubscribe
 
-            fileProcessing.Process();
+            //fileProcessing.Process("D://Namaz.csv");
 
-            //Here fileProcessing.notification is a publisher, and SendEmail, SendSms, SendWatsapp are subscribers.
-            //But problem is the delegate is not a true publisher subscriber model bcz we can anytime alter the list of subscribers
+            ////Here fileProcessing.notification is a publisher, and SendEmail, SendSms, SendWatsapp are subscribers.
+            ////But problem is the delegate is not a true publisher subscriber model bcz we can anytime alter the list of subscribers
 
-            //So to implement the publisher subscriber model in true sense we have Events in c#
-            //So Events are nothing but wrapper of delegates in which only owner of the subscription list can alter the list, and no outside alteration is possible
+            ////So to implement the publisher subscriber model in true sense we have Events in c#
+            ////So Events are nothing but wrapper of delegates in which only owner of the subscription list can alter the list, and no outside alteration is possible
 
-            //File Processing with Event
-            //Same file processing with publisher subscriber model that is event
-            FileProcessing fileProcessing1 = new FileProcessing();
-            fileProcessing1.notificationEvent += SendEmail;
-            fileProcessing1.notificationEvent += SendSms; //Multicast Delegate
-            //fileProcessing1.notificationEvent = null; //In events you cannot alter the subscription list
-            fileProcessing1.notificationEvent += SendWatsappMsg; //Subscribe
-            fileProcessing1.notificationEvent -= SendWatsappMsg; //UnSubscribe
+            ////File Processing with Event
+            ////Same file processing with publisher subscriber model that is event
+            //FileProcessing fileProcessing1 = new FileProcessing();
+            //fileProcessing1.notificationEvent += SendEmail;
+            //fileProcessing1.notificationEvent += SendSms; //Multicast Delegate
+            ////fileProcessing1.notificationEvent = null; //In events you cannot alter the subscription list
+            //fileProcessing1.notificationEvent += SendWatsappMsg; //Subscribe
+            //fileProcessing1.notificationEvent -= SendWatsappMsg; //UnSubscribe
 
-            fileProcessing1.Process();
+            //fileProcessing1.Process("D://Namaz.csv");
+
+            FileProcessing fileProcessing2 = new FileProcessing();
+            fileProcessing2.onNotificationSent += SendEmail;
+
+            fileProcessing2.Process("D://Namaz.csv");
 
             Console.ReadLine();
+        }
+
+        private static void SendEmail(object source, FileEventArgs e)
+        {
+            count = 10;
+            Console.WriteLine("Email Sent for file {0}", e.file_name);
         }
 
         private static void SendEmail()

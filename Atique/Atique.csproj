@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Atique.EventsAndDelegates.EntryPoint</StartupObject>
+    <StartupObject>Atique.Multithreading.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -60,6 +60,7 @@
     <Compile Include="Abstraction.cs" />
     <Compile Include="Linq.cs" />
     <Compile Include="LinqJoins.cs" />
+    <Compile Include="Multithreading.cs" />
     <Compile Include="OutAndRef.cs" />
     <Compile Include="Params.cs" />
     <Compile Include="Polymorphism.cs" />
